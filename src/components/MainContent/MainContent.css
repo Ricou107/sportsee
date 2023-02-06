@@ -1,0 +1,5 @@
+.MainContent {
+    display: flex;
+    height: calc(100% - 90px);
+    position: relative;
+}

@@ -1,0 +1,31 @@
+.BarChart {
+    width: 800px;
+    height: 330px;
+    background-color: #FBFBFB;
+    border-radius: 5px;
+    padding-top: 40px;
+    position: relative;
+}
+
+.bar-chart-title {
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    color: #20253A;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Roboto';
+}
+
+.bar-chart-legend {
+    width: 300px;
+    justify-content: space-between;
+    display: flex;
+    position: absolute;
+    top: 15px;
+    right: 50px;
+    color: #74798C;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Roboto';
+}

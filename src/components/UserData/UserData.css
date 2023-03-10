@@ -1,4 +1,15 @@
 .UserData {
-    margin-left: 80px;
-    margin-top: 50px;
+    width: 100%;
+    height: 100%;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.UserData-title {
+    margin: 0;
+    padding-top: 20px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 48px;
 }

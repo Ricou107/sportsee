@@ -8,11 +8,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-function RadarChartComponent({
-  performance,
-}: {
-  performance: UserPerformance;
-}) {
+function RadarChartComponent({performance}: {performance: UserPerformance;}) {
   let data = [];
 
   for (let kind in Kind) {

@@ -1,12 +1,25 @@
 // User Infos
+export interface User {
+    id: number,
+    userInfos: {
+        firstName: string,
+        lastName: string,
+        age: number
+    },
+    score?: number,
+    todayScore?: number,
+    keyData: Counts
+}
 export interface UserInfos {
     score: number,
-    counts: {
-        calorieCount: number
-        proteinCount: number
-        carbohydrateCount: number
-        lipidCount: number
-    }
+    counts: Counts
+}
+
+export interface Counts {
+    calorieCount: number
+    proteinCount: number
+    carbohydrateCount: number
+    lipidCount: number
 }
 
 // Performance
@@ -50,4 +63,16 @@ export interface UserSession {
     day: string,
     kilogram: number,
     calories: number
+}
+
+// Average sessions
+
+export interface UserAverageSessions {
+    userId: number,
+    sessions: AverageSessions[]
+}
+
+export interface AverageSessions {
+    day: number,
+    sessionLength: number
 }

@@ -1,0 +1,16 @@
+.LineChart {
+    width: 30%;
+    background-color: #FF0000;
+    border-radius: 5px;
+    position: relative;
+}
+
+.line-chart-title {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Roboto';
+}

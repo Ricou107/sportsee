@@ -2,11 +2,11 @@ import LeftBar from '../LeftBar/LeftBar';
 import UserData from '../UserData/UserData';
 import './MainContent.css';
 
-function MainContent() {
+function MainContent({userId}) {
   return (
     <div className='MainContent'>
         <LeftBar />
-        <UserData />
+        <UserData userId={userId}/>
     </div>
   );
 }

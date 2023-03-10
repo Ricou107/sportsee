@@ -1,9 +1,7 @@
 .BarChart {
-    width: 800px;
-    height: 330px;
+    height: 48%;
     background-color: #FBFBFB;
     border-radius: 5px;
-    padding-top: 40px;
     position: relative;
 }
 

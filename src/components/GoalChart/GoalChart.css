@@ -1,0 +1,47 @@
+.goalChart {
+  width: 30%;
+  background-color: #FBFBFB;
+  position: relative;
+  border-Radius: 5px;
+}
+
+.goalChart__title {
+  color: #20253A;
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.goalChart__legend {
+  color: #74798C;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 20px;
+  margin-top: 20px;
+}
+
+.goalChart__percentage {
+  color: #20253A;
+  font-size: v1.25rem;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 1200px) {
+  .goalChart__title {
+    top: 24px;
+    left: 30px;
+  }
+
+  .goalChart__legend {
+    font-size: 1rem;
+    line-height: 26px;
+  }
+  
+  .goalChart__percentage {
+    font-size: 1.625rem;
+  }
+}

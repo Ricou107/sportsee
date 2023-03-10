@@ -1,33 +1,41 @@
 import axios from "axios";
-import {UserActivity, UserPerformance} from "../interface";
+import {UserActivity, UserPerformance, UserAverageSessions, User} from "../interface";
+import mock from "../Assets/mock.json"
 
-async function getUserData() {
+async function getUserData(userId: number): Promise<{data: User}> {
   try {
-    const response = await axios.get("http://localhost:3030/user/18");
-    return response.data;
+    const response = userId === 0 ? mock.mockUserCall : await (await axios.get(`http://localhost:3030/user/${userId}`)).data;
+    return response;
   } catch (error) {
     console.log(error);
   }
 }
 
-async function getActivity(): Promise<{data: UserActivity}>  {
+async function getActivity(userId: number): Promise<{data: UserActivity}>  {
   try {
-    const response = await axios.get("http://localhost:3030/user/18/activity");
-    return response.data;
+    const response = userId === 0 ? mock.mockActivityCall : await (await axios.get(`http://localhost:3030/user/${userId}/activity`)).data;
+    return response;
   } catch (error) {
     console.log(error);
   }
 }
 
-async function getPerformance(): Promise<{data: UserPerformance}> {
+async function getPerformance(userId: number): Promise<{data: UserPerformance}> {
   try {
-    const response = await axios.get(
-      "http://localhost:3030/user/18/performance"
-    );
-    return response.data;
+    const response = userId === 0 ? mock.mockPerformanceCall : await (await axios.get(`http://localhost:3030/user/${userId}/performance`)).data;
+    return response;
   } catch (error) {
     console.log(error);
   }
 }
 
-export { getUserData, getActivity, getPerformance };
+async function getAverageSessions(userId: number): Promise<{data: UserAverageSessions}> {
+  try {
+    const response = userId === 0 ? mock.mockAverageSessionsCall : await (await axios.get(`http://localhost:3030/user/${userId}/average-sessions`)).data;
+    return response;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export {getUserData, getActivity, getPerformance, getAverageSessions};

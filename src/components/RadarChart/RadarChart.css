@@ -1,6 +1,5 @@
 .RadarChart {
-    width: 260px;
-    height: 260px;
+    width: 30%;
     background-color: #282D30;
     border-radius: 5px;
 }

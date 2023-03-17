@@ -21,3 +21,5 @@ To run the project:
 You'll need to run the backend server provided on this repo: https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard
 
 On the 'profile' tab on the main page, on hover a dropdown will appear. You'll be able to either use a mock or one of the two profil avaialble with the API.
+
+<img width="1427" alt="Capture d’écran 2023-03-17 à 10 50 09" src="https://user-images.githubusercontent.com/76947043/225870934-5873fc69-03c4-4769-b5a6-9067509f4f6b.png">

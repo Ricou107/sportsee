@@ -1,11 +1,12 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import './UserData.css';
 import Graphs from '../Graphs/Graphs';
 import { getUserData } from '../../services/axios';
 import {User} from "../../interface";
 
-function UserData({ userId }) {
+function UserData({ userId, updateUserId }) {
   const [user, updateUser] = useState<User | undefined>(undefined);
+  const [APIconnected, updateAPIconnected] = useState<boolean>(true);
 
   const fetchData = async () => {
     const response = await getUserData(userId);
@@ -17,12 +18,21 @@ function UserData({ userId }) {
     }
   };
 
-  useEffect(() => {
-    fetchData();
-  });
+    fetchData()
+    .then(() => {
+      if (userId !== 0) {
+        updateAPIconnected(true);
+      }
+    })
+    .catch(() => {
+      updateAPIconnected(false);
+      updateUserId(0);
+      fetchData();
+    });
 
   return (
     <div className="UserData">
+      {APIconnected ? ("") : (<div>API is not responding. Providing mock instead.</div>)}
       <p className="UserData-title">
         Bonjour{" "}
         {user ? (

@@ -1,7 +1,7 @@
 import "./Graphs.css";
 import { UserActivity, UserPerformance, UserAverageSessions } from "../../interface";
 import { getActivity, getPerformance, getAverageSessions } from "../../services/axios";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import RadarChartComponent from "../RadarChart/RadarChart";
 import BarChartComponent from "../BarChart/BarChart";
 import LineChartComponent from "../LineChart/LineChart";
@@ -43,11 +43,9 @@ function Graphs({ score, counts, userId }) {
     }
   };
 
-  useEffect(() => {
-    fetchActivity();
-    fetchPerformance();
-    fetchAverageSessions();
-  });
+  fetchPerformance();
+  fetchAverageSessions();
+  fetchActivity();
 
   return (
     <div className="Graphs">

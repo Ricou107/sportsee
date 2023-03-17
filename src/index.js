@@ -12,7 +12,7 @@ const [userId, updateUserId] = useState(12);
   return (
     <React.StrictMode>
       <Header updateUserId={updateUserId} />
-      <MainContent userId={userId} />
+      <MainContent userId={userId} updateUserId={updateUserId} />
     </React.StrictMode>
   );
 }

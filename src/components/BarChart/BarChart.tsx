@@ -23,12 +23,27 @@ for (let i = 0; i < activity.sessions.length; i ++) {
     })
 }
 
+const CustomTooltip = ({ active, payload, label }) => {
+  if (active && payload && payload.length) {
+    return (
+      <div className="custom-tooltip-bar-chart">
+        <p className="label">{`${payload[0].payload.kilogram}kg`}</p>
+        <p className="label">{`${payload[0].payload.calories}Kcal`}</p>
+      </div>
+    );
+  }
+}
+
   return (
     <div className="BarChart">
       <p className="bar-chart-title">Activité quotidienne</p>
       <div className="bar-chart-legend">
-        <p>Poids (kg)</p>
-        <p>Calories brûlées (kCal)</p>
+        <div className="tooltip-text">
+          <span className="bullet-point" style={{color: "#282D30"}}>•&nbsp;</span> Poids (kg)
+        </div>
+        <div className="tooltip-text">
+          <span className="bullet-point" style={{color: '#E60000'}}>•&nbsp;</span> Calories brûlées (kCal)
+        </div>
       </div>
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
@@ -56,7 +71,15 @@ for (let i = 0; i < activity.sessions.length; i ++) {
             tickLine={false}
             stroke="#9B9EAC"
           />
-          <Tooltip />
+          <Tooltip
+            content={
+              <CustomTooltip
+                active={undefined}
+                payload={undefined}
+                label={undefined}
+              />
+            }
+          />
           <Bar yAxisId="right" dataKey="kilogram" fill="#282D30" />
           <Bar yAxisId="left" dataKey="calories" fill="#E60000" />
         </BarChart>

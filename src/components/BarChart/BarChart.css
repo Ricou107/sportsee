@@ -27,3 +27,19 @@
     font-weight: 500;
     font-family: 'Roboto';
 }
+
+.custom-tooltip-bar-chart {
+    background-color: #E60000;
+    color: #FBFBFB;
+    padding: 3px;
+    border: 0;
+}
+
+.bullet-point {
+    font-size: 40px;
+}
+
+.tooltip-text {
+    display: flex;
+    align-items: center;
+}

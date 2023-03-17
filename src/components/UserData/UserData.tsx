@@ -8,6 +8,10 @@ function UserData({ userId, updateUserId }) {
   const [user, updateUser] = useState<User | undefined>(undefined);
   const [APIconnected, updateAPIconnected] = useState<boolean>(true);
 
+  /**
+   * Fetch the user data and provide mock data if necessary
+   * @constructor
+   */
   const fetchData = async () => {
     const response = await getUserData(userId);
     if (!response) {
@@ -18,7 +22,7 @@ function UserData({ userId, updateUserId }) {
     }
   };
 
-    fetchData()
+  fetchData()
     .then(() => {
       if (userId !== 0) {
         updateAPIconnected(true);
@@ -32,7 +36,11 @@ function UserData({ userId, updateUserId }) {
 
   return (
     <div className="UserData">
-      {APIconnected ? ("") : (<div>API is not responding. Providing mock instead.</div>)}
+      {APIconnected ? (
+        ""
+      ) : (
+        <div>API is not responding. Providing mock instead.</div>
+      )}
       <p className="UserData-title">
         Bonjour{" "}
         {user ? (

@@ -13,6 +13,10 @@ function Graphs({ score, counts, userId }) {
   const [performance, updatePerformance] = useState<UserPerformance | undefined>(undefined);
   const [averageSessions, updateAverageSessions] = useState<UserAverageSessions | undefined>(undefined);
 
+  /**
+   * Fetch the user activity and provide mock data if necessary
+   * @constructor
+   */
   const fetchActivity = async () => {
     const response = await getActivity(userId);
     if (!response) {
@@ -23,6 +27,10 @@ function Graphs({ score, counts, userId }) {
     }
   };
 
+  /**
+   * Fetch the user performance and provide mock data if necessary
+   * @constructor
+   */
   const fetchPerformance = async () => {
     const response = await getPerformance(userId);
     if (!response) {
@@ -33,6 +41,10 @@ function Graphs({ score, counts, userId }) {
     }
   };
 
+  /**
+   * Fetch the user activity and provide mock data if necessary
+   * @constructor
+   */
   const fetchAverageSessions = async () => {
     const response = await getAverageSessions(userId);
     if (!response) {

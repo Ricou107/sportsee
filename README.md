@@ -18,7 +18,7 @@ To run the project:
 
 ## Run the project with API
 
-You'll need to run the backend server provided on this repo: https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard
+You'll need to run the backend server on port 3030 provided on this repo: https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard
 
 On the 'profile' tab on the main page, on hover a dropdown will appear. You'll be able to either use a mock or one of the two profil avaialble with the API.
 

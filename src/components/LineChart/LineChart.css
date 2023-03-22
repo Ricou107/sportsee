@@ -14,3 +14,8 @@
     font-weight: 500;
     font-family: 'Roboto';
 }
+
+.line-chart-customTooltip p {
+    background-color: #FFFFFF;
+    padding: 7px;
+}

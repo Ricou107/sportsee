@@ -20,7 +20,7 @@ function LineChartComponent({ averageSessions }: { averageSessions: UserAverageS
   const CustomTooltip = ({ active, payload }: {active?: boolean, payload?: {value: string}[]}) => {
     if (active && payload && payload.length) {
       return (
-        <div className="averageSessionsChart__customTooltip">
+        <div className="line-chart-customTooltip">
           <p>{`${payload[0].value} min`}</p>
         </div>
       );
